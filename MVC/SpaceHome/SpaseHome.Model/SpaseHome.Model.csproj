@@ -76,7 +76,9 @@
     </EntityDeploy>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.Config" />
+    <None Include="App.Config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <None Include="SpaceHomeBase.edmx.diagram">
       <DependentUpon>SpaceHomeBase.edmx</DependentUpon>

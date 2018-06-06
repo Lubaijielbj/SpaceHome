@@ -9,5 +9,6 @@ namespace SpaseHome.IBLL
 {
     public interface IAccountService:IBaseService<Account>
     {
+        string Test();
     }
 }

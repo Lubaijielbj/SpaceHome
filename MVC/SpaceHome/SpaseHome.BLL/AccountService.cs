@@ -15,5 +15,10 @@ namespace SpaseHome.BLL
         {
             return dbSession.AccountDAL;
         }
+
+        public string Test()
+        {
+            return "OK!";
+        }
     }
 }

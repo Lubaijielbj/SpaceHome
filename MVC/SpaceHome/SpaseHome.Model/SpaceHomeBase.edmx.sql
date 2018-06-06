@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 05/31/2018 15:01:25
+-- Date Created: 06/06/2018 11:33:34
 -- Generated from EDMX file: E:\MyProject\MVC\SpaceHome\SpaseHome.Model\SpaceHomeBase.edmx
 -- --------------------------------------------------
 
@@ -22,6 +22,9 @@ GO
 -- Dropping existing tables
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[Account]', 'U') IS NOT NULL
+    DROP TABLE [dbo].[Account];
+GO
 
 -- --------------------------------------------------
 -- Creating all tables
@@ -32,11 +35,11 @@ CREATE TABLE [dbo].[Account] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [UserName] nvarchar(20)  NULL,
     [PassWord] nvarchar(20)  NULL,
-    [UserPhone] int  NULL,
+    [UserPhone] nvarchar(11)  NULL,
     [NickName] nvarchar(20)  NULL,
     [Head] nvarchar(50)  NULL,
     [Gender] tinyint  NULL,
-    [RegTime] time  NOT NULL,
+    [RegTime] datetime  NOT NULL,
     [DelFlag] tinyint  NOT NULL
 );
 GO

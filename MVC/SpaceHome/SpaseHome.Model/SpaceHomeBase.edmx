@@ -15,11 +15,11 @@
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="UserName" Type="nvarchar" Nullable="true" MaxLength="20" />
     <Property Name="PassWord" Type="nvarchar" Nullable="true" MaxLength="20" />
-    <Property Name="UserPhone" Type="int" Nullable="true" />
+    <Property Name="UserPhone" Type="nvarchar" Nullable="true" MaxLength="11" />
     <Property Name="NickName" Type="nvarchar" Nullable="true" MaxLength="20" />
     <Property Name="Head" Type="nvarchar" Nullable="true" MaxLength="50" />
     <Property Name="Gender" Type="tinyint" Nullable="true" DefaultValue="0" />
-    <Property Name="RegTime" Type="time" Nullable="false" />
+    <Property Name="RegTime" Type="datetime" Nullable="false" />
     <Property Name="DelFlag" Type="tinyint" Nullable="false" DefaultValue="0" />
   </EntityType>
 </Schema></edmx:StorageModels>
@@ -36,11 +36,11 @@
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="UserName" Type="String" Nullable="true" MaxLength="20" />
           <Property Name="PassWord" Type="String" Nullable="true" MaxLength="20" />
-          <Property Name="UserPhone" Type="Int32" Nullable="true" />
+          <Property Name="UserPhone" Type="String" Nullable="true" MaxLength="11" />
           <Property Name="NickName" Type="String" Nullable="true" MaxLength="20" />
           <Property Name="Head" Type="String" Nullable="true" MaxLength="50" />
           <Property Name="Gender" Type="Byte" Nullable="true" DefaultValue="0" />
-          <Property Name="RegTime" Type="Time" Nullable="false" />
+          <Property Name="RegTime" Type="DateTime" Nullable="false" />
           <Property Name="DelFlag" Type="Byte" Nullable="false" DefaultValue="0" />
         </EntityType>
       </Schema>

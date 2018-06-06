@@ -18,7 +18,7 @@ namespace SpaseHome.BLL
         public abstract IBaseDAL<T> SetCurrentDAL();
         public BaseService()
         {
-            SetCurrentDAL();
+            CurrentDAL = SetCurrentDAL();
         }
 
         public T AddEnity(T enity)

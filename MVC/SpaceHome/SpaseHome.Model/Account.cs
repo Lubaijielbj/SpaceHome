@@ -24,11 +24,11 @@ namespace SpaseHome.Model
         public int Id { get; set; }
         public string UserName { get; set; }
         public string PassWord { get; set; }
-        public Nullable<int> UserPhone { get; set; }
+        public string UserPhone { get; set; }
         public string NickName { get; set; }
         public string Head { get; set; }
         public Nullable<byte> Gender { get; set; }
-        public System.TimeSpan RegTime { get; set; }
+        public System.DateTime RegTime { get; set; }
         public byte DelFlag { get; set; }
     }
 }
