@@ -9,6 +9,6 @@ namespace SpaseHome.IBLL
 {
     public interface IAccountService:IBaseService<Account>
     {
-        string Test();
+        bool QueryEnity(System.Linq.Expressions.Expression<Func<Account, bool>> whereLambda);
     }
 }

@@ -47,7 +47,9 @@
 
     <script>
         $(function () {
-
+            $('#phone').val("15088844694");
+            $('#pwd').val("LBJlbj369");
+            $('#affirmPwd').val("LBJlbj369");
         });
 
         //切换注册方式
@@ -184,6 +186,7 @@
         function verifyCheckCode() {
             var checkCode = $('#checkCode');
             var code = "checkCode=" + checkCode.val();
+            alert(verCode);
             $.ajax({
                 type: "GET",
                 url: "VerifyCheckCode",
@@ -291,7 +294,7 @@
                     <a href="#" class="zhuce_qq">QQ注册</a>
                     <a href="#" class="zhuce_wb">微博注册</a>
                     <a href="#" class="zhuce_wx">微信注册</a>
-                    <p>已有账号？<a href="login.html">立即登录</a></p>
+                    <p>已有账号？<a href="@Url.Action("Index","Login")">立即登录</a></p>
 
                 </div>
             </div>

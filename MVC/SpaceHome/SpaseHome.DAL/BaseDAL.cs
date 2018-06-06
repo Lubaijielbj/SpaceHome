@@ -14,8 +14,7 @@ namespace SpaseHome.DAL
         public T AddEnity(T enity)
         {
             dbContext.Set<T>().Add(enity);
-            var TEnity = LoadEnities(t => t == enity);
-            return TEnity.FirstOrDefault<T>();
+            return enity;
         }
 
         public bool DelectEntity(T enity)

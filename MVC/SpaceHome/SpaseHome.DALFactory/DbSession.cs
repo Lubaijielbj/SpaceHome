@@ -38,7 +38,16 @@ namespace SpaseHome.DALFactory
         /// <returns></returns>
         public int SaveChanges()
         {
-            return dbContext.SaveChanges();
+            try
+            {
+                return dbContext.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            
         }
     }
 }

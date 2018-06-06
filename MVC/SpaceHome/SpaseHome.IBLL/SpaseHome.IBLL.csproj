@@ -45,6 +45,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SpaseHome.DALFactory\SpaseHome.DALFactory.csproj">
+      <Project>{8B985D24-E24A-4383-9D2D-2A43DD884724}</Project>
+      <Name>SpaseHome.DALFactory</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SpaseHome.Model\SpaseHome.Model.csproj">
       <Project>{2B07EBE7-F596-4C69-B0BB-9F3947ACF68A}</Project>
       <Name>SpaseHome.Model</Name>

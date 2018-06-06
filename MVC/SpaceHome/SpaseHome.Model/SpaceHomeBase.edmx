@@ -34,10 +34,10 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="UserName" Type="String" Nullable="true" MaxLength="20" />
-          <Property Name="PassWord" Type="String" Nullable="true" MaxLength="20" />
+          <Property Name="UserName" Type="String" Nullable="true" MaxLength="50" />
+          <Property Name="PassWord" Type="String" Nullable="true" MaxLength="50" />
           <Property Name="UserPhone" Type="String" Nullable="true" MaxLength="11" />
-          <Property Name="NickName" Type="String" Nullable="true" MaxLength="20" />
+          <Property Name="NickName" Type="String" Nullable="true" MaxLength="50" />
           <Property Name="Head" Type="String" Nullable="true" MaxLength="50" />
           <Property Name="Gender" Type="Byte" Nullable="true" DefaultValue="0" />
           <Property Name="RegTime" Type="DateTime" Nullable="false" />

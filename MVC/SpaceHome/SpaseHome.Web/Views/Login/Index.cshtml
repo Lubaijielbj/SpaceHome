@@ -1,0 +1,81 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SpaceHome</title>
+    <meta name="keywords" content="SpaceHome">
+    <meta name="content" content="SpaceHome">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <link type="text/css" rel="stylesheet" href="~/Content/login.css">
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <style>
+        .errorText {
+            float: left;
+            color: red;
+            font-size: 8px;
+        }
+    </style>
+    <script>
+        function verifyPhone() {
+            var phone = $('#phone');
+            var errorText = $('#errortextPhone')
+            var ver = /(^1[3|4|5|7|8]\d{9}$)|(^09\d{8}$)/;
+            if (phone.val() == null || !ver.test(phone.val())) {
+                if ($('#errorPhone').length <= 0) {
+                    phone.after('<img id="errorPhone" src="/images/warning.png" style="width:20px;height:20px"/>');
+                    errorText.html("手机号格式不正确");
+                    phone.css("border-color", "red");
+                }
+                return false;
+            } else {
+                if ($('#errorPhone').length > 0) {
+                    $('#errorPhone').remove();
+                    phone.css("border-color", "#dddddd");
+                    errorText.html("");
+                }
+                return true;
+            }
+        }
+    </script>
+
+</head>
+<body class="login_bj">
+    <div class="zhuce_body">
+        @*<div class="logo"><a href="#"><img src="~/images/logo.png" width="114" height="54" border="0"></a></div>*@
+        <div class="zhuce_kong login_kuang">
+            <div class="zc">
+                <div class="bj_bai">
+                    <h3>登录</h3>
+                    <form action="" method="get">
+                        <p id="errortextPhone" class="errorText"></p>
+                        <input id="phone" type="text" class="kuang_txt" placeholder="手机号/邮箱/用户名" onchange="verifyPhone();" maxlength="11">
+                        <input pwd="pwd" type="text" class="kuang_txt" placeholder="密码">
+                        <div>
+                            <a href="#">忘记密码？</a><input name="" type="checkbox" value="" checked><span>记住我</span>
+                        </div>
+                        <input name="登录" type="button" class="btn_zhuce" value="登录">
+
+                    </form>
+                </div>
+                <div class="bj_right">
+                    <p>使用以下账号直接登录</p>
+                    <a href="#" class="zhuce_qq">QQ注册</a>
+                    <a href="#" class="zhuce_wb">微博注册</a>
+                    <a href="#" class="zhuce_wx">微信注册</a>
+                    <p>没有账号？<a href="@Url.Action("Register","Login")">立即注册</a></p>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

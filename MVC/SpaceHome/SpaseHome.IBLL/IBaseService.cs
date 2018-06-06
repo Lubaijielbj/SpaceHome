@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SpaseHome.DALFactory;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ namespace SpaseHome.IBLL
 {
     public interface IBaseService<T> where T:class,new()
     {
+        IDbSession dbSession { get; }
         /// <summary>
         /// 查询
         /// </summary>

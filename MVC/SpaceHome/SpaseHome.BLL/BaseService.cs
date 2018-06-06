@@ -12,7 +12,18 @@ namespace SpaseHome.BLL
 {
     public abstract class BaseService<T> where T : class, new()
     {
-        public IDbSession dbSession = DbSessionFactory.CreatDbSession();
+        private IDbSession _dbSession;
+
+        public IDbSession dbSession {
+            get
+            {
+                if (_dbSession == null)
+                {
+                    _dbSession = DbSessionFactory.CreatDbSession();
+                }
+                return _dbSession;
+            }
+        }
 
         private IBaseDAL<T> CurrentDAL;
         public abstract IBaseDAL<T> SetCurrentDAL();

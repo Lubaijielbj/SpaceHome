@@ -18,11 +18,19 @@ namespace SpaseHome.Web.Controllers
             return View();
         }
 
+        /// <summary>
+        /// 注册页面
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Register()
         {
             return View();
         }
 
+        /// <summary>
+        /// 获取验证码
+        /// </summary>
+        /// <returns></returns>
         public ActionResult GetCheckCode()
         {
             string checkCode = Common.CheckCode.CreateCheckCode(4);
@@ -31,6 +39,10 @@ namespace SpaseHome.Web.Controllers
             return File(b, "image/jpg");
         }
 
+        /// <summary>
+        /// 验证验证码
+        /// </summary>
+        /// <returns></returns>
         public bool VerifyCheckCode()
         {
             string verifyCheckCode = Request["checkCode"];
@@ -39,14 +51,18 @@ namespace SpaseHome.Web.Controllers
             return string.Equals(verifyCheckCode, checkCode, StringComparison.CurrentCultureIgnoreCase);
         }
 
+        /// <summary>
+        /// 注册数据
+        /// </summary>
+        /// <returns></returns>
         public ActionResult RegData()
         {
-            IAccountService accountService = UnityIOC.Resolve<IAccountService>();
+            IAccountService accountService = UnityIOC.Resolve<IAccountService>();//创建AccountService BLL层接口
 
-            Account account = new Account { RegTime = DateTime.Now, NickName = Guid.NewGuid().ToString() };
+            Account account = new Account { RegTime = DateTime.Now, NickName = Guid.NewGuid().ToString() };//Model
 
             string type = Request["type"];
-
+            //使用手机号方式注册
             if (string.Equals(type, "phone"))
             {
                 string phone = Request["phone"];
@@ -55,10 +71,21 @@ namespace SpaseHome.Web.Controllers
                 account.UserPhone = phone;
                 account.PassWord = MD5Helper.MD5Encrypt64(pwd);
 
-                var s = accountService.LoadEnities(u => u.UserPhone == account.UserPhone);
-
-                string aa = "zhangmanerhuo";
+                //查询需要注册的手机号是否已经注册过
+                if (accountService.QueryEnity(u => u.UserPhone == account.UserPhone))
+                {
+                    return Content("exist");
+                }
+                //添加数据，注册
+                accountService.AddEnity(account);
+                if (accountService.dbSession.SaveChanges() > 0)
+                {
+                    return Content("success");
+                }
+                
             }
+            //使用邮件方式注册
+            //TODO
             if (string.Equals(type, "mail"))
             {
                 string mail = Request["mail"];
@@ -70,8 +97,8 @@ namespace SpaseHome.Web.Controllers
 
         public ActionResult Test()
         {
-            IAccountService account = UnityIOC.Resolve<IAccountService>();
-            ViewBag.account = account.Test();
+            //IAccountService account = UnityIOC.Resolve<IAccountService>();
+            //ViewBag.account = account.Test();
             return View();
         }
     }
