@@ -150,15 +150,26 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CookiesDictionary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Left\base.css" />
+    <Content Include="Content\Left\custom.css" />
+    <Content Include="Content\Left\jquery.mCustomScrollbar.min.css" />
+    <Content Include="Content\Left\menu.css" />
+    <Content Include="Content\Left\style.css" />
     <Content Include="Content\login.css" />
+    <Content Include="Content\MasterView.css" />
+    <Content Include="Content\MasterView\demo.css" />
+    <Content Include="Content\MasterView\icenter-delay-yoo180525155114.css" />
+    <Content Include="Content\MasterView\normalize.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -232,7 +243,9 @@
     <Content Include="images\shoppingImg-01.jpg" />
     <Content Include="images\sj.png" />
     <Content Include="images\smallMirror.png" />
+    <Content Include="images\space.png" />
     <Content Include="images\tubiao_more.png" />
+    <Content Include="images\user.jpg" />
     <Content Include="images\vip.png" />
     <Content Include="images\wangjimm_hui.png" />
     <Content Include="images\wangjimm_lan.png" />
@@ -264,10 +277,13 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\Left\custom.js" />
+    <Content Include="Scripts\Left\jquery.mCustomScrollbar.concat.min.js" />
     <Content Include="Scripts\md5.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Test.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -288,10 +304,11 @@
     </Content>
     <Content Include="Views\Login\Test.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Shared\_MasterView.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

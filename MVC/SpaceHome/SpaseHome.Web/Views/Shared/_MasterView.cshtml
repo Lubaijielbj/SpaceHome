@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>_MasterVIew</title>
+    <link href="~/Content/MasterView.css" rel="stylesheet" />
+    @RenderSection("head", true)
+    <style type="text/css">
+    </style>
+</head>
+<body>
+    <header class="header-navigation" id="header">
+        <img class="logo" src="~/images/space.png" />
+        <nav class="wrap">
+            <a class="link" href="#" title="Home">首页</a>
+            <a class="link" href="#" title="About">关于我们</a>
+            <a class="link" href="#" title="Contact">联系我们</a>
+        </nav>
+    </header>
+    <div class="sidebarwrapper">
+        @*第一栏*@
+        <div class="sidebarhead">
+            <div class="userPic">
+                @*头像*@
+                <img class="userImg" src="~/images/user.jpg" />
+            </div>
+            <div class="userInfo">
+                <span class="userName">团子</span>
+                <div>
+                    <span class="text">等级:</span>
+                    <span>24</span>
+                </div>
+                <div class="userStatus">
+                    <a class="label" href="#">zaixian</a>
+                </div>
+            </div>
+        </div>
+        @*搜索*@
+        <div class="sidebarsearch">
+            <div class="search">
+                <input type="text" placeholder="搜索从这里开始..." class="searchCheckbox">
+                <input type="button" class="searchButton" value="🔍" />
+            </div>
+        </div>  
+        <div class="sidebarMenu">
+            <div class="menuLink">
+                <img src="~/images/car.png" /> <span class="menuText">好友动态</span>
+            </div>
+            <div class="menuLink">
+                <img src="~/images/car.png" /> <span class="menuText">好友动态</span>
+            </div>
+            <div class="menuLink">
+                <img src="~/images/car.png" /> <span class="menuText">好友动态</span>
+            </div>
+            <div class="menuLink">
+                <img src="~/images/car.png" /> <span class="menuText">好友动态</span>
+            </div>
+            <div class="menuLink">
+                <img src="~/images/car.png" /> <span class="menuText">好友动态</span>
+            </div>
+            <div class="menuLink">
+                <img src="~/images/car.png" /> <span class="menuText">好友动态</span>
+            </div>
+            <div class="menuLink">
+                <img src="~/images/car.png" /> <span class="menuText">好友动态</span>
+            </div>
+        </div>
+    </div>
+    @RenderBody()
+</body>
+</html>
