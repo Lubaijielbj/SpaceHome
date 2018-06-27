@@ -3,70 +3,169 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>_MasterVIew</title>
-    <link href="~/Content/MasterView.css" rel="stylesheet" />
-    @RenderSection("head", true)
-    <style type="text/css">
-    </style>
+    <title></title>
+    <link href="~/Content/SpaceHomeCommon.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    @RenderSection("head")
 </head>
 <body>
-    <header class="header-navigation" id="header">
-        <img class="logo" src="~/images/space.png" />
-        <nav class="wrap">
-            <a class="link" href="#" title="Home">首页</a>
-            <a class="link" href="#" title="About">关于我们</a>
-            <a class="link" href="#" title="Contact">联系我们</a>
-        </nav>
-    </header>
-    <div class="sidebarwrapper">
-        @*第一栏*@
-        <div class="sidebarhead">
-            <div class="userPic">
-                @*头像*@
-                <img class="userImg" src="~/images/user.jpg" />
+    @**************顶部导航条*************@
+    <div id="navbar" class="navigation-bar">
+        <div class="navbar-title">
+            @*logo*@
+            <div>
+                <div class="navbar-title-logo"></div>
             </div>
-            <div class="userInfo">
-                <span class="userName">团子</span>
+            @*导航菜单*@
+            <div class="navbar-title-enum">
+                <ul>
+                    <li>
+                        <div class="navbar-title-enum-list">
+                            <span></span><span>个人中心</span>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="navbar-title-enum-list">
+                            <span></span><span>我的主页</span>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="navbar-title-enum-list">
+                            <span></span><span>好友</span>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="navbar-title-enum-list">
+                            <span></span><span>广场</span>
+                        </div>
+                    </li>
+                </ul>
+                
+            </div>
+            @*右边菜单*@
+            <div class="navbar-title-right">
+                <div class="search-box">
+                    <input type="text" class="search-textbox" placeholder="好友动态/广场" />
+                    <input type="button" class="search-btn" value="🔍" />
+                </div>
+                <div class="user-setting">
+                    <div class="navbar-title-right-head">
+                        <img name="head" src="~/images/tuanzi.jpg" class="user-pic-head"/>
+                    </div>
+                    <div class="navbar-title-right-setting">
+                        <img src="~/images/settings.png" style="width:80%;margin-top:15px;"/>
+                        <ul class="user-setting-submeun">
+                            <li>
+                                <div>
+                                    <a href="@Url.Action("UserInfo","User")"><span>修改资料</span></a>                                    
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <a href="#"><span>权限设置</span></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <a href="#"><span>主页设置</span></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <a href="#"><span>修改密码</span></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <a href="#"><span>更换账号</span></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <a href="#"><span>退出登录</span></a>
+                                </div>
+                            </li>
+                            <div style="height:15px;"></div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div style="margin-left:100px;height:1046px;width:1000px;">
+        <div style="float:right;width:800px;height:1000px">
+            <div style="float:left;width:600px;height:1000px;margin-left:10px">
                 <div>
-                    <span class="text">等级:</span>
-                    <span>24</span>
+                    @RenderBody()
                 </div>
-                <div class="userStatus">
-                    <a class="label" href="#">zaixian</a>
-                </div>
+            </div>
+            <div style="float:left;width:200px;height:1000px;background-color: blue;">
+
             </div>
         </div>
-        @*搜索*@
-        <div class="sidebarsearch">
-            <div class="search">
-                <input type="text" placeholder="搜索从这里开始..." class="searchCheckbox">
-                <input type="button" class="searchButton" value="🔍" />
+        <div style="float:right;width:200px;">
+            <div class="nav-left-top">
+                <div class="user-pic-box">
+                    <img name="head" src="~/images/tuanzi.jpg" class="user-pic-head" />
+                </div>
+                <div class="user-name titleText">
+                    <span>团子</span>
+                    <select class="state-select">
+                        <option value="volvo">在线</option>
+                        <option value="saab">忙碌</option>
+                        <option value="opel">隐身</option>
+                        <option value="audi">不在线</option>
+                    </select>
+                </div>
+                <div>
+                    <input type="text" class="user-sign" placeholder="个性签名" />
+                </div>
+
+                <div class="user-level">
+                    <span>等级：</span><span>💗💗💗💗</span>
+                </div>
             </div>
-        </div>  
-        <div class="sidebarMenu">
-            <div class="menuLink">
-                <img src="~/images/car.png" /> <span class="menuText">好友动态</span>
-            </div>
-            <div class="menuLink">
-                <img src="~/images/car.png" /> <span class="menuText">好友动态</span>
-            </div>
-            <div class="menuLink">
-                <img src="~/images/car.png" /> <span class="menuText">好友动态</span>
-            </div>
-            <div class="menuLink">
-                <img src="~/images/car.png" /> <span class="menuText">好友动态</span>
-            </div>
-            <div class="menuLink">
-                <img src="~/images/car.png" /> <span class="menuText">好友动态</span>
-            </div>
-            <div class="menuLink">
-                <img src="~/images/car.png" /> <span class="menuText">好友动态</span>
-            </div>
-            <div class="menuLink">
-                <img src="~/images/car.png" /> <span class="menuText">好友动态</span>
+
+            <div class="nav-left-enum">
+                <div class="left-enum">
+                    <ul>
+                        <li>
+                            <div class="left-enum-list">
+                                <span></span><span>好友动态</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left-enum-list">
+                                <span></span><span>特别关心</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left-enum-list">
+                                <span></span><span>与我相关</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left-enum-list">
+                                <span></span><span>那年今日</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="left-enum-list">
+                                <span></span><span>留言板</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
         </div>
     </div>
-    @RenderBody()
+
+
 </body>
 </html>

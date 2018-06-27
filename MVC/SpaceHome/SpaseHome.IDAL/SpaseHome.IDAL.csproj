@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="IAccountDAL.cs" />
     <Compile Include="IBaseDAL.cs" />
+    <Compile Include="IUserInfoDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

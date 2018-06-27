@@ -12,6 +12,7 @@ namespace SpaseHome.DALFactory
     {
         DbContext dbContext { get; }
         IAccountDAL AccountDAL { get; set; }
+        IUserInfoDAL UserInfoDAL { get; set; }
 
         int SaveChanges();
     }

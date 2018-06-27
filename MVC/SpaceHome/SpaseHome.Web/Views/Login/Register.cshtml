@@ -186,7 +186,7 @@
         function verifyCheckCode() {
             var checkCode = $('#checkCode');
             var code = "checkCode=" + checkCode.val();
-            alert(verCode);
+            //alert(verCode);
             $.ajax({
                 type: "GET",
                 url: "VerifyCheckCode",
@@ -217,7 +217,7 @@
             if ($('#Switch').html() == "邮箱注册") {
                 if (verifyPhone() && checkStrong() && affirmPwdNum() && isCheckCode && $('#protocol').is(":checked")) {
                     var phone = $('#phone').val();
-                    var pwd = hex_md5($('#pwd').val());
+                    var pwd = $('#pwd').val();
                     var regData = { "type": "phone", "phone": phone, "pwd": pwd };
 
                     $.ajax({
@@ -225,7 +225,11 @@
                         url: "@Url.Action("RegData","Login")",
                         data: regData,
                         success: function (msg) {
-                            alert(msg);
+                            if (msg == 'success') {
+                                window.location.href = '@Url.Action("Index","Login")';
+                            } else {
+                                alert(msg);
+                            }
                         }
                     });
                 }
@@ -240,7 +244,11 @@
                         url: "@Url.Action("RegData","Login")",
                         data: regData,
                         success: function (msg) {
-                            alert(msg);
+                            if (msg == 'success') {
+                                window.location.href = '@Url.Action("Index","Login")';
+                            } else {
+                                alert(msg);
+                            }
                         }
                     });
 

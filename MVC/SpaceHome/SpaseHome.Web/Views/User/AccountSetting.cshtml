@@ -1,0 +1,102 @@
+﻿
+@{
+    ViewBag.Title = "AccountSetting";
+    Layout = "~/Views/Shared/_MasterView.cshtml";
+}
+
+@section head{
+    <link href="~/Content/UserView.css" rel="stylesheet" />
+    <script>
+        function Test() {
+            $('#tx').show();
+            $('#tt').hide();
+        }
+    </script>
+}
+
+<div style="margin-left:20px;">
+    @*头像*@
+    <div class="head">
+        <div class="head-box">
+            <img src="~/images/tuanzi.jpg" class="head-pic"/>
+        </div>
+        <div>
+            <a href="#">修改头像</a>
+        </div>
+    </div>
+    @*基本资料*@
+    <div class="setting-tile">        
+        <span>基本资料</span>
+        <span style="float:right;margin-right:10px;font-size:80%" onclick="Test();"><a href="#">修改</a></span>
+    </div>
+    @*资料*@
+    <div class="per-info">
+        <ul>
+            <li>
+                <label>昵称：</label>
+                <span>团子</span>
+                <input type="text" style="display:none;" />
+            </li>
+            <li>
+                <label>性别：</label>
+                <span>男</span>
+                <select style="height:20px;width:40px;display:none">
+                    <option>男</option>
+                    <option>女</option>
+                </select>
+            </li>
+            <li>
+                <label>生日：</label>
+                <span>2014-04-01</span>
+            </li>
+            <li>
+                <label>星座：</label>
+                <span>双鱼座</span>
+            </li>
+            <li>
+                <label>年龄：</label>
+                <span>4岁</span>
+                <input type="text" style="display:none;" />
+            </li>
+            <li>
+                <label>血型：</label>
+                <span>B型</span>
+                <select style="height:20px;width:60px;display:none">
+                    <option value="1"> A </option>
+                    <option value="2"> B </option>
+                    <option value="3"> O </option>
+                    <option value="4"> AB </option>
+                    <option value="5">其它</option>
+                </select>
+            </li>
+            <li>
+                <label>感情状况：</label>
+                <span>单身</span>
+                <select style="height:20px;width:60px;display:none">
+                    <option value="1">单身</option>
+                    <option value="4">恋爱中</option>
+                    <option value="5">已订婚</option>
+                    <option value="2">已婚</option>
+                    <option value="6">分居</option>
+                    <option value="7">离异</option>
+                    <option value="3">保密</option>
+                </select>
+            </li>
+            <li>
+                <label>现居住地：</label>
+                <span>中国-浙江-宁波</span>
+                <select style="height:20px;width:60px;display:none"></select>
+                <select style="height:20px;width:60px;display:none"></select>
+                <select style="height:20px;width:60px;display:none"></select>
+            </li>
+            <li>
+                <label>故乡：</label>
+                <span>中国-浙江-宁波</span>
+                <select style="height:20px;width:60px;display:none"></select>
+                <select style="height:20px;width:60px;display:none"></select>
+                <select style="height:20px;width:60px;display:none"></select>
+            </li>
+        </ul>
+    </div>
+</div>
+

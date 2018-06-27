@@ -68,6 +68,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SpaceHomeBase.edmx</DependentUpon>
     </Compile>
+    <Compile Include="UserInfo.cs">
+      <DependentUpon>SpaceHomeBase.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="SpaceHomeBase.edmx">

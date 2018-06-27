@@ -1,0 +1,65 @@
+﻿ol, ul, h1, h2, h3, h4, h5, h6, p, th, td, dl, dd, form, fieldset, legend, input, textarea, select,div {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    padding: 0;
+    background: linear-gradient(135deg, #aac4bc 0%,#eca8a8 100%,#eed5a9 100%);
+    background-color: rgba(0, 0, 0, 0);
+    background-image: linear-gradient(135deg, rgb(170, 196, 188) 0%, rgb(236, 168, 168) 100%, rgb(238, 213, 169) 100%);
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-origin: padding-box;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-size: auto auto;
+    font-family: helvetica,arial,微软雅黑,华文黑体;
+    -webkit-text-size-adjust: 100%;
+}
+
+a {
+    color: #2d374b;
+    text-decoration: none
+}
+
+    a:hover {
+        color: #cd0200;
+        text-decoration: underline
+    }
+
+em {
+    font-style: normal
+}
+
+li {
+    list-style: none
+}
+
+img {
+    border: 0;
+    vertical-align: middle
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+p {
+    word-wrap: break-word
+}
+
+.w{
+    width:1046px;
+}
+/*************************************d顶部导航栏**************************************************/
+
+.nav-top{
+    height:40px;
+    width:100%;
+    background-color:#000;
+    border:none;
+    
+}

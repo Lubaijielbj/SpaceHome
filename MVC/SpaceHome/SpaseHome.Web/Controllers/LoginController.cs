@@ -53,13 +53,14 @@ namespace SpaseHome.Web.Controllers
             //使用手机号登录
             if(Regex.IsMatch(user, @"^[1]+[3,4,5,7,8]+\d{9}")&&user.Length==11)
             {
-                var accounts = accountService.LoadEnities(u => u.UserPhone == user);//查找账号
+                var accounts = accountService.LoadEnities(u => u.PhoneNum == user);//查找账号
                 if (accounts.FirstOrDefault() != null)
                 {
                     var account = accounts.FirstOrDefault();
                     if (account.PassWord == MD5Helper.MD5Encrypt64(pwd))
                     {
                         SetCookies(isRem, 15, new CookiesDictionary<string, string> { Key=nameof(user),Value=user},new CookiesDictionary<string, string> { Key=nameof(pwd),Value=pwd});
+                        HttpContext.Session["account"] = account;
                         return Content("success");//登录成功
                     }
                     else
@@ -147,7 +148,18 @@ namespace SpaseHome.Web.Controllers
         public ActionResult RegData()
         {
             
-            Account account = new Account { RegTime = DateTime.Now, NickName = Guid.NewGuid().ToString() };//Model
+            Account account = new Account();//Model
+            UserInfo userInfo = new UserInfo();
+
+            account.UserInfo = userInfo;
+            account.RegTime = DateTime.Now;
+            account.LastLoginTime = account.RegTime;
+
+            userInfo.UserId = Guid.NewGuid();
+            userInfo.HeadImg =@"\images\tuanzi.jpg";
+            userInfo.Account = account;
+
+            account.UserId = userInfo.UserId;
 
             string type = Request["type"];
             //使用手机号方式注册
@@ -156,16 +168,17 @@ namespace SpaseHome.Web.Controllers
                 string phone = Request["phone"];
                 string pwd = Request["pwd"];
 
-                account.UserPhone = phone;
+                account.PhoneNum = phone;
                 account.PassWord = MD5Helper.MD5Encrypt64(pwd);
 
                 //查询需要注册的手机号是否已经注册过
-                if (accountService.QueryEnity(u => u.UserPhone == account.UserPhone))
+                if (accountService.QueryEnity(u => u.PhoneNum == account.PhoneNum))
                 {
                     return Content("exist");
                 }
                 //添加数据，注册
                 accountService.AddEnity(account);
+
                 if (accountService.dbSession.SaveChanges() > 0)
                 {
                     return Content("success");

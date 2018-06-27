@@ -26,5 +26,6 @@ namespace SpaseHome.Model
         }
     
         public virtual DbSet<Account> Account { get; set; }
+        public virtual DbSet<UserInfo> UserInfo { get; set; }
     }
 }

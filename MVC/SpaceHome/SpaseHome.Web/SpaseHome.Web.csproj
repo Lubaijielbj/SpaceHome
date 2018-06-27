@@ -148,6 +148,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\UserController.cs" />
@@ -160,18 +161,23 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\laydate.css" />
     <Content Include="Content\Left\base.css" />
     <Content Include="Content\Left\custom.css" />
     <Content Include="Content\Left\jquery.mCustomScrollbar.min.css" />
     <Content Include="Content\Left\menu.css" />
     <Content Include="Content\Left\style.css" />
     <Content Include="Content\login.css" />
+    <Content Include="Content\Master.css" />
     <Content Include="Content\MasterView.css" />
     <Content Include="Content\MasterView\demo.css" />
     <Content Include="Content\MasterView\icenter-delay-yoo180525155114.css" />
     <Content Include="Content\MasterView\normalize.css" />
+    <Content Include="Content\userInfo.css" />
+    <Content Include="Content\UserView.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\icomoon.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="images\banner_bd.jpg" />
@@ -227,6 +233,11 @@
     <Content Include="images\headImg-btn.png" />
     <Content Include="images\headImg.jpg" />
     <Content Include="images\headImg.png" />
+    <Content Include="images\images\background.jpg" />
+    <Content Include="images\images\error.png" />
+    <Content Include="images\images\head.jpg" />
+    <Content Include="images\images\icon.png" />
+    <Content Include="images\images\logo.png" />
     <Content Include="images\img-01.jpg" />
     <Content Include="images\jiesuan_dg.png" />
     <Content Include="images\line_heng.jpg" />
@@ -240,10 +251,13 @@
     <Content Include="images\part-05.jpg" />
     <Content Include="images\qq.jpg" />
     <Content Include="images\searchSub.png" />
+    <Content Include="images\settings.png" />
     <Content Include="images\shoppingImg-01.jpg" />
     <Content Include="images\sj.png" />
     <Content Include="images\smallMirror.png" />
     <Content Include="images\space.png" />
+    <Content Include="images\sprite.png" />
+    <Content Include="images\tuanzi.jpg" />
     <Content Include="images\tubiao_more.png" />
     <Content Include="images\user.jpg" />
     <Content Include="images\vip.png" />
@@ -269,6 +283,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="images\Thumbs.db" />
+    <Content Include="fonts\icomoon.eot" />
+    <Content Include="fonts\icomoon.ttf" />
+    <Content Include="fonts\icomoon.woff" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -277,13 +294,17 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\laydate.js" />
     <Content Include="Scripts\Left\custom.js" />
     <Content Include="Scripts\Left\jquery.mCustomScrollbar.concat.min.js" />
     <Content Include="Scripts\md5.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Content\SpaceHomeCommon.css" />
     <Content Include="Test.html" />
+    <Content Include="Test\Master.css" />
+    <Content Include="Test\MasterView.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -301,14 +322,20 @@
     <Content Include="Views\Login\Register.cshtml" />
     <Content Include="Unity.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Views\Login\Test.cshtml" />
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Shared\_MasterView.cshtml" />
+    <Content Include="Views\User\AccountSetting.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\User\---UserInfo.cshtml" />
+    <Content Include="Views\Shared\Master.cshtml" />
+    <Content Include="Views\User\UserInfo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

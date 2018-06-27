@@ -49,7 +49,7 @@
                             errorText.html("用户不存在");
                         }
                         else if (msg == "success") {
-                            alert("登录成功！");
+                            window.location.href = '@Url.Action("index","User")';
                         }
                     }
                 });

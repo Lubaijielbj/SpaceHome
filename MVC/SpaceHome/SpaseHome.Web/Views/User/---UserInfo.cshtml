@@ -1,0 +1,126 @@
+﻿@using SpaseHome.Model
+@model UserInfo
+@{
+    ViewBag.Title = "UserInfo";
+    Layout = "~/Views/Shared/_MasterView.cshtml";
+}
+
+@section head{
+    <link href="~/Content/UserView.css" rel="stylesheet" />
+    <link href="~/Content/laydate.css" rel="stylesheet" />
+    <script src="~/Scripts/laydate.js"></script>
+    <script>
+        $(function () {
+            $("img[name$='head']").attr("src", "@Model.HeadImg");//加载头像
+            lay('#version').html('-v' + laydate.v);
+
+            //执行一个laydate实例
+            laydate.render({
+                elem: '#brithday' //指定元素
+            });
+
+        });
+
+        function setting() {
+            var oldInfo = $("[name$='oldInfo']");
+            var settingInfo = $("[name$='setting']");
+
+            oldInfo.css("display", "none");
+            settingInfo.css("display", "block");
+        }
+    </script>
+}
+<div style="margin-left:20px;">
+    @*头像*@
+    <div class="head">
+        <div class="head-box">
+            <img name="head" src="~/images/tuanzi.jpg" class="head-pic" />
+        </div>
+        <div>
+            <a href="#">修改头像</a>
+        </div>
+    </div>
+    @*基本资料*@
+    <div class="setting-tile">
+        <span>基本资料</span>
+        <span style="float:right;margin-right:10px;font-size:80%" onclick="setting();"><a href="#">修改</a></span>
+    </div>
+    @*资料*@
+    <div class="per-info">
+        <ul>
+            <li>
+                <label>昵称：</label>
+                <span name="oldInfo">@Model.Nick</span>
+                <input name="setting" type="text" placeholder="@Model.Nick" style="display:none" />
+            </li>
+            <li>
+                <label>性别：</label>
+                <span name="oldInfo">@Model.Gender</span>
+                <select name="setting" style="height:20px;width:60px;display:none">
+                    <option>男</option>
+                    <option>女</option>
+                </select>
+                
+            </li>
+            <li>
+                <label>生日：</label>
+                <span name="oldInfo">@Model.BrithDay.ToString().Split(' ')[0]</span>
+                <input name="setting" type="text" placeholder="@Model.BrithDay.ToString().Split(' ')[0]" id="brithday" class="brithday-box" style="display:none"/>
+            </li>
+            <li>
+                <label>星座：</label>
+                <span name="oldInfo">@Model.Sign</span>
+                <select name="setting" style="height:20px;width:60px;display:none">
+                    <option>男</option>
+                    <option>女</option>
+                </select>
+            </li>
+            <li>
+                <label>年龄：</label>
+                <span name="oldInfo">@Model.Age</span>
+                <input name="setting" type="text" style="display:none;" />
+            </li>
+            <li>
+                <label>血型：</label>
+                <span name="oldInfo">@Model.BloodType</span>
+                <select name="setting" style="height:20px;width:60px;display:none">
+                    <option value="1"> A </option>
+                    <option value="2"> B </option>
+                    <option value="3"> O </option>
+                    <option value="4"> AB </option>
+                    <option value="5">其它</option>
+                </select>
+            </li>
+            <li>
+                <label>感情状况：</label>
+                <span name="oldInfo">@Model.MaritalStatus</span>
+                <select name="setting" style="height:20px;width:80px;display:none">
+                    <option value="1">单身</option>
+                    <option value="4">恋爱中</option>
+                    <option value="5">已订婚</option>
+                    <option value="2">已婚</option>
+                    <option value="6">分居</option>
+                    <option value="7">离异</option>
+                    <option value="3">保密</option>
+                </select>
+            </li>
+            <li>
+                <label>现居住地：</label>
+                <span name="oldInfo">@Model.Address</span>
+                <select name="setting" style="height:20px;width:60px;margin-right:5px;display:none"></select>
+                <select name="setting" style="height:20px;width:60px;margin-right:5px;display:none"></select>
+                <select name="setting" style="height:20px;width:60px;margin-right:5px;display:none"></select>
+            </li>
+            <li>
+                <label>故乡：</label>
+                <span name="oldInfo">@Model.BirthPlace</span>
+                <select name="setting" style="height:20px;width:60px;margin-right:5px;display:none"></select>
+                <select name="setting" style="height:20px;width:60px;margin-right:5px;display:none"></select>
+                <select name="setting" style="height:20px;width:60px;margin-right:5px;display:none"></select>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+

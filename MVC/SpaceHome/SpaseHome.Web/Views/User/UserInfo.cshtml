@@ -1,0 +1,172 @@
+﻿
+@{
+    ViewBag.Title = "UserInfo";
+    Layout = "~/Views/Shared/Master.cshtml";
+}
+@section head{
+    <link href="~/Content/userInfo.css" rel="stylesheet" />
+}
+
+
+<div class="userinfo-main">
+    <div class="userinfo-title">
+        <span class="text">个人资料</span>
+    </div>
+    <div class="userinfo-left">
+        
+    </div>
+    <div class="userinfo-right">
+        <div class="userinfo-head">
+            <img class="userinfo-headimg" src="~/images/images/head.jpg" />
+            <a href="javascript:;">修改头像</a>
+           
+        </div>
+        <div class="userinfo-edit">
+            <div class="userinfo-edit-title">
+                <span style="position:absolute;bottom:5px;left:20px;font-size:15px;font-weight:700">基本资料</span>
+                <a class="userinfo-editbtn" href="javascript:;">修改资料</a>
+            </div>
+            <div class="userinfo-edit-box">
+                <ul>
+                    <li>
+                        <div class="userinfo-edit-left">用户名：</div>
+                        <div class="userinfo-edit-right">团子</div>
+                    </li>
+                    <li>
+                        <div class="userinfo-edit-left">性别：</div>
+                        <div class="userinfo-edit-right">男</div>
+                    </li>
+                    <li>
+                        <div class="userinfo-edit-left">年龄：</div>
+                        <div class="userinfo-edit-right">4</div>
+                    </li>
+                    <li>
+                        <div class="userinfo-edit-left">生日：</div>
+                        <div class="userinfo-edit-right">10月26日</div>
+                    </li>
+                    <li>
+                        <div class="userinfo-edit-left">星座：</div>
+                        <div class="userinfo-edit-right">天蝎座</div>
+                    </li>
+                    <li>
+                        <div class="userinfo-edit-left">现居住地：</div>
+                        <div class="userinfo-edit-right">中国 浙江 宁波</div>
+                    </li>
+                    <li>
+                        <div class="userinfo-edit-left">婚姻状况：</div>
+                        <div class="userinfo-edit-right">单身</div>
+                    </li>
+                    <li>
+                        <div class="userinfo-edit-left">血型：</div>
+                        <div class="userinfo-edit-right">其他</div>
+                    </li>
+                    <li>
+                        <div class="userinfo-edit-left">故乡：</div>
+                        <div class="userinfo-edit-right">中国 浙江 宁波</div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="userinfo-edit-box-new">
+                <ul>
+                    <li>
+                        <div class="userinfo-edit-left">用户名：</div>
+                        <div class="userinfo-edit-right">
+                            <input type="text" />
+                        </div>
+                    </li>
+                    <li>
+                        <div class="userinfo-edit-left">性别：</div>
+                        <div class="userinfo-edit-right">
+                            <select>
+                                <option>男</option>
+                                <option>女</option>
+                            </select>
+                        </div>
+                    </li>                   
+                    <li>
+                        <div class="userinfo-edit-left">生日：</div>
+                        <div class="userinfo-edit-right">
+                            <input type="date"/>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="userinfo-edit-left">星座：</div>
+                        <div class="userinfo-edit-right">天蝎座</div>
+                    </li>
+                    <li>
+                        <div class="userinfo-edit-left">现居住地：</div>
+                        <div class="userinfo-edit-right">
+                            <select>
+                                <option>江苏</option>
+                                <option>浙江</option>
+                            </select>
+                            <span>省</span>
+                            <select>
+                                <option>江苏</option>
+                                <option>浙江</option>
+                            </select>
+                            <span>市</span>
+                            <select>
+                                <option>江苏</option>
+                                <option>浙江</option>
+                            </select>
+                            <span>区/县</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="userinfo-edit-left">婚姻状况：</div>
+                        <div class="userinfo-edit-right">
+                            <select>
+                                <option>江苏</option>
+                                <option>浙江</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="userinfo-edit-left">血型：</div>
+                        <div class="userinfo-edit-right">
+                            <select>
+                                <option>江苏</option>
+                                <option>浙江</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="userinfo-edit-left">故乡：</div>
+                        <div class="userinfo-edit-right">
+                            <select>
+                                <option>江苏</option>
+                                <option>浙江</option>
+                            </select>
+                            <span>省</span>
+                            <select>
+                                <option>江苏</option>
+                                <option>浙江</option>
+                            </select>
+                            <span>市</span>
+                            <select>
+                                <option>江苏</option>
+                                <option>浙江</option>
+                            </select>
+                            <span>区/县</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="userinfo-edit-left">个人简介：</div>
+                        <div class="userinfo-edit-right">
+                            <textarea></textarea>
+                        </div>
+                    </li>
+                </ul>
+
+                <div>
+                    <input type="button" value="保存" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+

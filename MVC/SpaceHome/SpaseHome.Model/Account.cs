@@ -19,16 +19,20 @@ namespace SpaseHome.Model
         {
             this.Gender = 0;
             this.DelFlag = 0;
+            this.LoginErrorTimes = 0;
         }
     
-        public int Id { get; set; }
+        public int AccountId { get; set; }
         public string UserName { get; set; }
         public string PassWord { get; set; }
-        public string UserPhone { get; set; }
-        public string NickName { get; set; }
-        public string Head { get; set; }
+        public string PhoneNum { get; set; }
         public Nullable<byte> Gender { get; set; }
         public System.DateTime RegTime { get; set; }
         public byte DelFlag { get; set; }
+        public Nullable<System.DateTime> LastLoginTime { get; set; }
+        public Nullable<byte> LoginErrorTimes { get; set; }
+        public System.Guid UserId { get; set; }
+    
+        public virtual UserInfo UserInfo { get; set; }
     }
 }

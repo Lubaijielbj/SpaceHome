@@ -1,0 +1,101 @@
+﻿.userinfo-main{
+    margin-top:50px;
+    height:800px;
+    border:1px solid #9b9b9b;
+}
+
+.userinfo-title {
+    height: 40px;
+    border-bottom: 1px solid #9b9b9b;
+    position:relative;
+}
+
+.userinfo-title>.text{
+    position:absolute;
+    bottom:2px;
+    left:10px;
+    font-size:85%;
+    font-weight:600;
+}
+
+.userinfo-left {
+    display:inline-block;
+    float:left;
+    width: 170px;
+    height: 759px;
+    background-color: white;
+    border-right: 1px solid #9b9b9b;
+}
+
+.userinfo-right {
+    display: inline-block;
+    float: left;
+    width:877px;
+    height: 759px;
+    background-color: white;
+}
+
+.userinfo-head {
+    height: 120px;
+    border-bottom: 1px solid #9b9b9b;
+    text-align:center;
+    font-size:80%;
+    position:relative;
+}
+
+.userinfo-headimg {
+    display: block;
+    margin: 10px auto;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    border: 1px solid #dcdcdc;
+    padding: 2px;
+    background-color: white;
+}
+
+.userinfo-editbtn{
+    position:absolute;
+    bottom:5px;
+    right:20px;
+    color:#5250e4;
+    cursor:pointer;
+}
+
+.userinfo-edit {
+    padding:10px;
+    font-size: 80%;
+}
+
+.userinfo-edit-title {
+    height: 40px;
+    border-bottom: 1px solid #dcdcdc;
+    position: relative;
+}
+
+.userinfo-edit-box{
+    display:none;
+    padding-top:10px;
+}
+
+.userinfo-edit-left {
+    display: inline-block;
+    width: 150px;
+    height: 30px;
+    margin-left: 30px;
+    /*text-align:center;*/
+    /*float:left;*/
+}
+
+.userinfo-edit-right {
+    display: inline-block;
+    width: 500px;
+    height: 30px;
+    /*text-align: center;*/
+    /*float:left;*/
+}
+
+.userinfo-edit-box-new {
+    display: block;
+    padding-top: 10px;
+}

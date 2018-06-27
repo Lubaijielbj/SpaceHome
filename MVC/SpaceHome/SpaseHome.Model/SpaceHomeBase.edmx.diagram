@@ -5,7 +5,9 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="fb7561162a9243838ca95c3cc34a9ee8" Name="Diagram1" >
-        <EntityTypeShape EntityType="SpaceHomeBase.Account" Width="1.5" PointX="2" PointY="1.75" />
+        <EntityTypeShape EntityType="SpaceHomeBase.Account" Width="1.5" PointX="1.375" PointY="0.5" />
+        <EntityTypeShape EntityType="SpaceHomeBase.UserInfo" Width="1.5" PointX="4.875" PointY="1.375" />
+        <AssociationConnector Association="SpaceHomeBase.AccountUserInfo" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

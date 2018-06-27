@@ -33,6 +33,29 @@ namespace SpaseHome.DALFactory
         }
 
         /// <summary>
+        /// 创建UserInfoDAL实例
+        /// </summary>
+        private IUserInfoDAL _userInfoDAL;
+        public IUserInfoDAL UserInfoDAL
+        {
+            get
+            {
+                if (_userInfoDAL == null)
+                {
+                    _userInfoDAL = new UserInfoDAL();
+                }
+
+                return _userInfoDAL;
+            }
+
+            set
+            {
+                _userInfoDAL = value;
+            }
+        }
+
+
+        /// <summary>
         /// 统一访问数据库
         /// </summary>
         /// <returns></returns>

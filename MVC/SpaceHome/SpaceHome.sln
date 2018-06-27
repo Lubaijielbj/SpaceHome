@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaseHome.Web.Tests", "Spas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceHome.BLLContainer", "SpaceHome.BLLContainer\SpaceHome.BLLContainer.csproj", "{02644A3A-4463-4262-BF76-D6EC5F32C6C2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaseHome.NewWeb", "SpaseHome.NewWeb\SpaseHome.NewWeb.csproj", "{97228FC9-ED8D-4000-A9B8-F27D0D841EDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaseHome.NewWeb.Tests", "SpaseHome.NewWeb.Tests\SpaseHome.NewWeb.Tests.csproj", "{DC65B553-B600-47D3-BDA6-E8FB66CB9B0D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +79,14 @@ Global
 		{02644A3A-4463-4262-BF76-D6EC5F32C6C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{02644A3A-4463-4262-BF76-D6EC5F32C6C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{02644A3A-4463-4262-BF76-D6EC5F32C6C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97228FC9-ED8D-4000-A9B8-F27D0D841EDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97228FC9-ED8D-4000-A9B8-F27D0D841EDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97228FC9-ED8D-4000-A9B8-F27D0D841EDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97228FC9-ED8D-4000-A9B8-F27D0D841EDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC65B553-B600-47D3-BDA6-E8FB66CB9B0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC65B553-B600-47D3-BDA6-E8FB66CB9B0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC65B553-B600-47D3-BDA6-E8FB66CB9B0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC65B553-B600-47D3-BDA6-E8FB66CB9B0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
