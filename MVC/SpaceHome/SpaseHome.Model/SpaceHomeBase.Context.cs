@@ -13,10 +13,10 @@ namespace SpaseHome.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class SpaceHomeBaseContainer : DbContext
+    public partial class SpaseHomeEntities : DbContext
     {
-        public SpaceHomeBaseContainer()
-            : base("name=SpaceHomeBaseContainer")
+        public SpaseHomeEntities()
+            : base("name=SpaseHomeEntities")
         {
         }
     

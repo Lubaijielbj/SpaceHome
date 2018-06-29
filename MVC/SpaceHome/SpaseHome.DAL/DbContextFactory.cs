@@ -19,7 +19,7 @@ namespace SpaseHome.DAL
             DbContext dbContext = (DbContext)CallContext.GetData("dbContext");
             if (dbContext == null)
             {
-                dbContext = new SpaceHomeBaseContainer();
+                dbContext = new SpaseHomeEntities();
                 CallContext.SetData("dbContext", dbContext);
             }
 

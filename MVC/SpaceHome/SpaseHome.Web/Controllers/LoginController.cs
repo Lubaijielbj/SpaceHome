@@ -151,13 +151,13 @@ namespace SpaseHome.Web.Controllers
             Account account = new Account();//Model
             UserInfo userInfo = new UserInfo();
 
-            account.UserInfo = userInfo;
+            //account.UserInfo = userInfo;
             account.RegTime = DateTime.Now;
             account.LastLoginTime = account.RegTime;
 
             userInfo.UserId = Guid.NewGuid();
             userInfo.HeadImg =@"\images\tuanzi.jpg";
-            userInfo.Account = account;
+            //userInfo.Account = account;
 
             account.UserId = userInfo.UserId;
 

@@ -1,0 +1,73 @@
+﻿* {
+    margin: 0;
+    padding: 0
+}
+
+body {
+    padding: 0;
+    background: linear-gradient(135deg, #aac4bc 0%,#eca8a8 100%,#eed5a9 100%);
+    background-color: rgba(0, 0, 0, 0);
+    background-image: linear-gradient(135deg, rgb(170, 196, 188) 0%, rgb(236, 168, 168) 100%, rgb(238, 213, 169) 100%);
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-origin: padding-box;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-size: auto auto;
+    font-family: helvetica,arial,微软雅黑,华文黑体;
+    -webkit-text-size-adjust: 100%;
+}
+
+a {
+    color: #2d374b;
+    text-decoration: none
+}
+
+    a:hover {
+        color: #cd0200;
+        text-decoration: underline
+    }
+
+em {
+    font-style: normal
+}
+
+li {
+    list-style: none
+}
+
+img {
+    border: 0;
+     /*vertical-align: middle*/ 
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+p {
+    word-wrap: break-word
+}
+
+.w {
+    width: 1050px;
+    margin: 0 auto;
+}
+
+.iconfont {
+    font-family: "icomoon";
+}
+
+.clearfix:after {
+    content: "."; /*加一段内容*/
+    display: block; /*让生成的元素以块级元素显示，占满剩余空间*/
+    height: 0; /*避免生成的内容破坏原有布局高度*/
+    clear: both; /*清除浮动*/
+    visibility: hidden; /*让生成的内容不可见*/
+}
+
+.clearfix {
+    zoom: 1; /*为IE6，7的兼容性设置*/
+}

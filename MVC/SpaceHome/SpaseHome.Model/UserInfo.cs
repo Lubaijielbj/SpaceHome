@@ -14,15 +14,6 @@ namespace SpaseHome.Model
     
     public partial class UserInfo
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public UserInfo()
-        {
-            this.Gender = 0;
-            this.MaritalStatus = "保密";
-            this.Address = "北京";
-            this.BirthPlace = "北京";
-        }
-    
         public System.Guid UserId { get; set; }
         public string Nick { get; set; }
         public Nullable<byte> Gender { get; set; }
@@ -33,9 +24,7 @@ namespace SpaseHome.Model
         public string Address { get; set; }
         public string BirthPlace { get; set; }
         public string HeadImg { get; set; }
-        public Nullable<int> AccountId { get; set; }
+        public System.Guid AccountId { get; set; }
         public Nullable<int> Age { get; set; }
-    
-        public virtual Account Account { get; set; }
     }
 }

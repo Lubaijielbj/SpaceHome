@@ -1,0 +1,158 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MasterView.cshtml";
+}
+@section head{
+    <link href="~/Content/PersonalCenter.css" rel="stylesheet" />
+}
+
+<!-- 左侧菜单 -->
+<div class="main-nav-left">
+    <!-- 个人信息 -->
+    <div class="userInfo">
+        <img class="headimg" src="~/images/head.jpg">
+        <div class="username">
+            <span>团子</span>
+            <select class="userstate" name="" id="">
+                <option value="">在线</option>
+                <option value="">忙碌</option>
+                <option value="">隐身</option>
+                <option value="">离线</option>
+            </select>
+        </div>
+        <div class="usergrade">
+            <span>等级：</span>
+            <span class="iconfont" style="color: rgb(235, 72, 72)"></span>
+        </div>
+        <div class="info">
+            <div>
+                <p class="count">12345</p>
+                <p class="title">关注</p>
+            </div>
+            <div>
+                <p class="count">345</p>
+                <p class="title">粉丝</p>
+            </div>
+            <div>
+                <p class="count">2345</p>
+                <p class="title">动态</p>
+            </div>
+        </div>
+    </div>
+    <!-- 菜单 -->
+    <div class="menu">
+        <ul>
+            <li>
+                <a href="javascript:;">
+                    <div>
+                        <span class="iconfont"></span>
+                        <span class="main title">首页</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <div>
+                        <span class="iconfont"></span>
+                        <span class="main title">热门</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <div>
+                        <span class="iconfont"></span>
+                        <span class="main title">广场</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <div style="height:1px;width:130px; background-color:#a5a5a5;margin:2px auto;"></div>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <div>
+                        <span class="iconfont"></span>
+                        <span class="title">特别关注</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <div>
+                        <span class="iconfont"></span>
+                        <span class="title">悄悄关注</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <div>
+                        <span class="iconfont"></span>
+                        <span class="title">我的收藏</span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">
+                    <div>
+                        <span class="iconfont"></span>
+                        <span class="title">我的点赞</span>
+                    </div>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</div>
+<!--右侧菜单-->
+<div class="main-right">
+
+</div>
+<!--中间部分-->
+<div class="main-middle">
+    <div class="edit main-middle-w">
+        <div class="title">
+            <div class="left">
+                <img src="~/images/logantext.png" />
+            </div>
+        </div>
+        <div class="editbox">
+            <div class="inputtext">
+                <textarea></textarea>
+            </div>            
+        </div>
+        <div class="editbottom">
+            <div class="left">
+                <ul>
+                    <li>
+                        <div>
+                            <span class="iconfont"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span class="iconfont"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span class="iconfont">#</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span class="iconfont">@@</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="right">
+                <button>发布</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+

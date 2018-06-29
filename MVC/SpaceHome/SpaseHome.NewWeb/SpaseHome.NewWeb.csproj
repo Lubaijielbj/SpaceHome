@@ -46,6 +46,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.8.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -154,12 +160,18 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PersonalCenterController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ReturnState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\initial.css" />
+    <Content Include="Content\master.css" />
+    <Content Include="Content\PersonalCenter.css" />
+    <Content Include="fonts\icomoon.svg" />
     <Content Include="images\bg.jpg" />
     <Content Include="Content\account.css" />
     <Content Include="Content\bootstrap.css" />
@@ -168,12 +180,27 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\head.jpg" />
+    <Content Include="images\logantext.png" />
+    <Content Include="images\logo.png" />
+    <Content Include="plugin\layer\layer.js" />
+    <Content Include="plugin\layer\mobile\layer.js" />
+    <Content Include="plugin\layer\mobile\need\layer.css" />
+    <Content Include="plugin\layer\theme\default\icon-ext.png" />
+    <Content Include="plugin\layer\theme\default\icon.png" />
+    <Content Include="plugin\layer\theme\default\layer.css" />
+    <Content Include="plugin\layer\theme\default\loading-0.gif" />
+    <Content Include="plugin\layer\theme\default\loading-1.gif" />
+    <Content Include="plugin\layer\theme\default\loading-2.gif" />
     <Content Include="Scripts\account\Login.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="fonts\icomoon.eot" />
+    <Content Include="fonts\icomoon.ttf" />
+    <Content Include="fonts\icomoon.woff" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -200,10 +227,15 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\Index.cshtml" />
+    <Content Include="Unity.config">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Views\Shared\_MasterView.cshtml" />
+    <Content Include="Views\PersonalCenter\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -217,6 +249,32 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SpaceHome.BLLContainer\SpaceHome.BLLContainer.csproj">
+      <Project>{02644a3a-4463-4262-bf76-d6ec5f32c6c2}</Project>
+      <Name>SpaceHome.BLLContainer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpaseHome.BLL\SpaseHome.BLL.csproj">
+      <Project>{2fbcf95e-c422-4e34-a2a5-a15047613b83}</Project>
+      <Name>SpaseHome.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpaseHome.Common\SpaseHome.Common.csproj">
+      <Project>{92f2bab5-9a50-4771-b922-5aa31ed526b1}</Project>
+      <Name>SpaseHome.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpaseHome.DALFactory\SpaseHome.DALFactory.csproj">
+      <Project>{8B985D24-E24A-4383-9D2D-2A43DD884724}</Project>
+      <Name>SpaseHome.DALFactory</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpaseHome.IBLL\SpaseHome.IBLL.csproj">
+      <Project>{CF5EC6B4-9322-44C6-B695-93B2BD8B15C4}</Project>
+      <Name>SpaseHome.IBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SpaseHome.Model\SpaseHome.Model.csproj">
+      <Project>{2b07ebe7-f596-4c69-b0bb-9f3947acf68a}</Project>
+      <Name>SpaseHome.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

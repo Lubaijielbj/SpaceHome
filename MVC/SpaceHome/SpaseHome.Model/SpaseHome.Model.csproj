@@ -73,35 +73,32 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EntityDeploy Include="SpaceHomeBase.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>SpaceHomeBase.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="App.Config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
+    <EntityDeploy Include="SpaceHomeBase.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SpaceHomeBase.Designer.cs</LastGenOutput>
+    </EntityDeploy>
     <None Include="SpaceHomeBase.edmx.diagram">
       <DependentUpon>SpaceHomeBase.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="SpaceHomeBase.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>SpaceHomeBase.Context.cs</LastGenOutput>
-      <DependentUpon>SpaceHomeBase.edmx</DependentUpon>
-    </Content>
-    <Content Include="SpaceHomeBase.edmx.sql" />
-    <Content Include="SpaceHomeBase.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>SpaceHomeBase.cs</LastGenOutput>
-      <DependentUpon>SpaceHomeBase.edmx</DependentUpon>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Content Include="SpaceHomeBase.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SpaceHomeBase.edmx</DependentUpon>
+      <LastGenOutput>SpaceHomeBase.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="SpaceHomeBase.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SpaceHomeBase.edmx</DependentUpon>
+      <LastGenOutput>SpaceHomeBase.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaseHome.NewWeb", "SpaseHo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaseHome.NewWeb.Tests", "SpaseHome.NewWeb.Tests\SpaseHome.NewWeb.Tests.csproj", "{DC65B553-B600-47D3-BDA6-E8FB66CB9B0D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{CFDB9F90-20B7-4D0F-BA06-F274C4ADD6C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{DC65B553-B600-47D3-BDA6-E8FB66CB9B0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC65B553-B600-47D3-BDA6-E8FB66CB9B0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC65B553-B600-47D3-BDA6-E8FB66CB9B0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFDB9F90-20B7-4D0F-BA06-F274C4ADD6C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFDB9F90-20B7-4D0F-BA06-F274C4ADD6C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFDB9F90-20B7-4D0F-BA06-F274C4ADD6C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFDB9F90-20B7-4D0F-BA06-F274C4ADD6C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

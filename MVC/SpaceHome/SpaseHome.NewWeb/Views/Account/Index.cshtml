@@ -13,6 +13,19 @@
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/plugin/layer/layer.js"></script>
     <script src="~/Scripts/account/Login.js"></script>
+    <script>
+        $(function () {
+            @if (Request.Cookies["username"].Value != null)
+            {
+                ViewBag.username = Request.Cookies["username"].Value;
+            }
+
+            @if (Request.Cookies["pwd"].Value != null)
+            {
+                ViewBag.pwd = Request.Cookies["pwd"].Value;
+            }
+        });
+    </script>
 </head>
 <body>
     <div>
@@ -25,17 +38,17 @@
                 </div>
                 <div class="loginfrom">
                     <div class="textbox">
-                        <input class="inputtext" type="text" placeholder="账号/手机号登录" />
+                        <input id="username" class="inputtext" type="text" value="@ViewBag.username" placeholder="账号/手机号登录" onchange="loginUserName();"/>
                     </div>
                     <div class="textbox">
-                        <input class="inputtext" type="password" placeholder="输入密码" />
+                        <input id="pwd" class="inputtext" type="password" value="@ViewBag.pwd" placeholder="输入密码" onchange="loginPwd();"/>
                     </div>
                     <div class="check">
-                        <input type="checkbox" style="margin-right:5px" />
+                        <input id="rememberpwd" type="checkbox" checked="checked" style="margin-right:5px" />
                         <span>记住密码</span>
                     </div>
                     <div class="textbox">
-                        <input class="loginbtn" type="button" value="登录" />
+                        <input class="loginbtn" type="button" value="登录" onclick="userLogin();"/>
                     </div>
                 </div>
                 <div class="login-bottom">
@@ -63,13 +76,13 @@
                 </div>
                 <div class="registerfrom">
                     <div class="textbox">
-                        <input id="regusername" class="inputtext" type="text" placeholder="用户名" onchange="test();"/>
+                        <input id="regusername" class="inputtext" type="text" placeholder="用户名" onchange="verifyUserName();"/>
                     </div>
                     <div class="textbox">
-                        <input id="regpwd" class="inputtext" type="password" placeholder="密码" />
+                        <input id="regpwd" class="inputtext" type="password" placeholder="密码" onchange="verifyPwd();" />
                     </div>
                     <div class="textbox">
-                        <input id="reguserphone" class="inputtext" type="tel" placeholder="手机号" />
+                        <input id="reguserphone" class="inputtext" type="tel" placeholder="手机号" onchange="verifyUserPhone();"/>
                     </div>
                     <div class="textbox">
                         <input id="regverifycode" class="verifycode" type="tel" placeholder="验证码" />
@@ -80,7 +93,7 @@
                         <span>已阅读并同意<a href="javascript:;">《用户协议》</a></span>
                     </div>
                     <div class="textbox">
-                        <input id="regsendbtn" class="loginbtn" type="button" value="登录" onclick="close();"/>
+                        <input id="regsendbtn" class="loginbtn" type="button" value="注册" onclick="Reg();"/>
                     </div>
                 </div>
                 <div class="login-bottom">

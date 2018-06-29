@@ -1,0 +1,244 @@
+﻿/********************************** 左侧菜单 *****************************************************************/
+.main-nav-left {
+    margin-top:25px;
+    position:fixed;
+}
+
+    .main-nav-left > div {
+        background-color: rgba(230, 230, 230, 0.308);
+        padding: 10px 0;
+        border-radius: 5px;
+    }
+
+    .main-nav-left > .userInfo {
+        text-align: center;
+    }
+
+    .main-nav-left .headimg {
+        max-width: 60px;
+        border-radius: 50%;
+        background-color: #fff;
+        padding: 2px;
+    }
+
+    .main-nav-left .username {
+        margin: 10px auto;
+        font-weight: 700;
+        font-size: 85%;
+    }
+
+    .main-nav-left .userstate {
+        border: none;
+        border-radius: 8px;
+        background-color: rgb(91, 175, 190);
+        padding: 1px 5px;
+        margin-left: 5px;
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        outline: none;
+        font-size: 70%;
+    }
+
+    .main-nav-left .usergrade {
+        font-weight: 700;
+        font-size: 70%;
+    }
+
+    .main-nav-left .info {
+        width: 150px;
+        margin-top: 10px;
+        display: flex;
+    }
+
+        .main-nav-left .info > div {
+            flex: 1;
+            text-align: center;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+            .main-nav-left .info > div:active {
+                color: rgb(228, 94, 94);
+            }
+
+            .main-nav-left .info > div > .count {
+                font-size: 85%;
+            }
+
+            .main-nav-left .info > div > .title {
+                font-size: 85%;
+                font-weight: 600;
+            }
+
+    .main-nav-left .userlogan {
+        width: 140px;
+        margin: 10px auto;
+        font-weight: 500;
+        font-size: 80%;
+        color: rgb(82, 82, 82);
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+.userloganbox {
+    display: none;
+    height: 20px;
+    width: 140px;
+    border: none;
+    outline: none;
+}
+
+.main-nav-left > .menu{
+    margin-top:25px;
+}
+
+.main-nav-left > .menu a {
+    display: block;
+    height: 30px;
+    font-size: 85%;
+    /* font-weight: 600; */
+    line-height: 30px;
+    border-bottom: 1px solid #cacaca;
+}
+
+    .main-nav-left > .menu a .main{
+        font-weight:600;
+    }
+
+    .main-nav-left > .menu a:hover {
+        background-color: rgb(180, 180, 180);
+        text-decoration: none;
+    }
+
+    .main-nav-left > .menu a > div {
+        margin-left: 25px;
+    }
+
+/******************************* 右侧菜单 ******************************************************************/
+
+.main-right {
+    display: inline-block;
+    width: 230px;
+    margin-top:25px;
+    height:2000px;
+    float: right;
+    background-color: #fff; 
+}
+
+/******************************* 中间边部分 ******************************************************************/
+.main-middle {
+    display: inline-block;
+    width: 670px;
+    margin-top:25px;
+    float: right;
+    height: 2000px;
+    /*background-color: #6d6be0;*/
+}
+
+.main-middle-w{
+    width:650px;
+}
+
+.edit{
+    margin:0 auto;
+    background-color:#fff;
+}
+
+.edit>.title{
+    height:40px;
+    width:620px;
+    margin:0 auto;
+    /*background-color:aqua;*/
+}
+
+    .edit > .title > .left {
+        display: inline-block;
+        height:40px;
+        position:absolute;
+    }
+
+    .edit > .title > .left img {
+        height: 20px;
+        position:absolute;
+        bottom:5px;
+    }
+
+.editbox{
+    height:80px;
+    background-color:#fff;
+}
+
+    .editbox > .inputtext {
+        height: 70px;
+        width: 598px;
+        margin: 0 auto;
+        padding: 5px 10px;
+        background-color: #fff;
+        border: 1px solid #d4d4d4;
+        box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.15) inset;
+    }
+
+    .editbox textarea {
+        height: 100%;
+        width: 100%;
+        border: none;
+        outline: none;
+        cursor: text;
+        resize: none;
+        word-break: break-word;
+        word-wrap: break-word;
+    }
+
+.editbottom {
+    height: 40px;
+    width: 620px;
+    margin: 0 auto;
+    /*background-color: aquamarine;*/
+}
+
+.editbottom *{
+    display:inline-block;
+}
+
+    .editbottom > .left{
+        line-height:40px;
+        font-size:120%;
+    }
+
+    .editbottom > .left li{
+        padding:0 5px;
+        color:#808080;
+        cursor:pointer;
+    }
+
+        .editbottom > .left li:hover{
+            color:#4b4b4b;
+        }
+
+        .editbottom > .right {
+            line-height: 40px;
+            float: right;
+        }
+
+        .editbottom > .right > button {
+            width: 60px;
+            height: 30px;
+            border: 1px solid #85ce2f;
+            border-radius: 4px;
+            font-family: "Microsoft Yahei","微软雅黑",SimHei,"黑体","Hiragino Sans GB",STHeiTi,sans-serif;
+            color: #fff;
+            background-color: #85ce2f;
+            cursor: pointer;
+            outline: none;
+            letter-spacing: 0.05em;
+        }
+
+            .editbottom > .right > button:hover{
+                color:#4b4b4b;
+            }
+            .editbottom > .right > button:active {
+                background-color: #6ea929;
+            }
+

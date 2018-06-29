@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href="~/Content/initial.css" rel="stylesheet" />
+    <link href="~/Content/master.css" rel="stylesheet" />
+    <style>
+        @@font-face {
+            font-family: 'icomoon';
+            src: url('../../fonts/icomoon.eot') format('embedded-opentype');
+        }
+        @@font-face {
+            font-family: 'icomoon';
+            src: url('../../fonts/icomoon.svg') format('svg');
+        }
+        @@font-face {
+            font-family: 'icomoon';
+            src: url('../../fonts/icomoon.ttf') format('truetype');
+        }
+        @@font-face {
+            font-family: 'icomoon';
+            src: url('../../fonts/icomoon.woff') format('woff');
+        }
+    </style>
+
+    @RenderSection("head", false);
+</head>
+<body>
+    <!-- 导航栏 -->
+    <!-- 导航栏 -->
+    <div class="nav-top">
+        <div class="w clearfix">
+            <!-- logo -->
+            <img class="logo" src="~/images/logo.png">
+            <!-- 个人资料和设置 -->
+            <div class="nav-top-right">
+                <div class="top-edit">
+                    <a href="javascript:;">
+                        <span class="iconfont"></span>
+                    </a>
+                </div>
+                <!-- 设置 -->
+                <div class="setting">
+                    <a href="javascript:;">
+                        <span class="iconfont"></span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a class="settingmenu" href="javascript:;">
+                                <span>修改资料</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="settingmenu" href="javascript:;">
+                                <span>权限设置</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="settingmenu" href="javascript:;">
+                                <span>修改密码</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="settingmenu" href="javascript:;">
+                                <span>切换账号</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 个人信息 -->
+                <div class="userInfo">
+                    <img class="headimg" src="~/images/head.jpg">
+                    <span class="username">团子</span>
+                </div>
+                <!-- 搜索 -->
+                <!-- <div class="search">
+                    <input class="searchbox" type="text" placeholder="动态/好友/广场">
+                    <button class="searchbtn iconfont"></button>
+                </div> -->
+            </div>
+            <!-- 菜单 -->
+            <div class="nav-top-menu">
+                <ul>
+                    <li>
+                        <a class="top-menu" href="javascript:;">
+                            <span class="iconfont"></span>
+                            <span class="text">首页</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="top-menu" href="javascript:;">
+                            <span class="iconfont"></span>
+                            <span class="text">好友</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="top-menu" href="javascript:;">
+                            <span class="iconfont"></span>
+                            <span class="text">相册</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="top-menu" href="javascript:;">
+                            <span class="iconfont"></span>
+                            <span class="text">广场</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="top-menu" href="javascript:;">
+                            <span class="iconfont"></span>
+                            <span class="text">个人中心</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 搜素 -->
+            <div>
+                <div class="search">
+                    <input class="searchbox" type="text" placeholder="动态/好友/广场">
+                    <button class="searchbtn iconfont"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main w clearfix">
+        @RenderBody()
+    </div>
+</body>
+</html>
