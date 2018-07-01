@@ -1,0 +1,43 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MasterView.cshtml";
+}
+@section head{
+    <script>
+        $(function () {
+
+            $('button').click(function () {
+                var $input = $('#avatar');
+                var files = $input.prop('files');
+                console.log(files);
+
+                var data = new FormData();
+                data.append('avatar', files[0]);
+
+                $.ajax({
+                    type: "POST",
+                    url: "@Url.Action("Receive","Test")",
+                    data: data,
+                    cache: false,
+                    processData: false,
+                    contentType: false,
+                    success: function (msg) {
+                        alert(msg);
+                    }
+                });
+            });
+
+
+        });
+        
+    </script>
+    }
+
+<div>
+    <form>
+        <input type="file" id="avatar" name=" avatar" multiple/>
+        <button type="button">保存</button>
+    </form>
+</div>
+

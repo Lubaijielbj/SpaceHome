@@ -5,8 +5,84 @@
 }
 @section head{
     <link href="~/Content/PersonalCenter.css" rel="stylesheet" />
-}
+    <link href="~/plugin/emoji/public/style/emoji.css" rel="stylesheet" />
+    <script src="~/plugin/emoji/code/jquery.emoticons.js"></script>
 
+    <script>
+        $(function () {
+            $.emoticons({
+                'activeCls': 'trigger-active'
+            }, function (api) {
+                var $content = $('#textbox');
+                var $result = $('#AAA');
+                $('#publish').click(function () {
+                    $result.html(api.format($content.val()));
+                });
+            });
+
+            addPic();
+
+        });
+
+        function display(dom) {
+            var $dom = $(dom);
+            var picbox = $('#selectpicbox');
+
+            var h = $dom.height();
+            var y = $dom.offset().top;
+            var x = $dom.offset().left;
+
+            var top = y + h;
+            var left = x;
+
+            picbox.css({ "top": top, "left": left, "display":"block" });
+
+        }
+
+        var index = 0;
+        function addPic() {
+            var addpic = $('#addpic');
+            var selectfile = $('#selectfile');
+
+            addpic.click(function () {
+                selectfile.click();
+            });
+
+            selectfile.change(function (e) {
+
+                var files = selectfile[0].files[0];
+                if (window.FileReader) {//检测浏览器对FileReader的支持
+                    var filereader = new FileReader();
+                    filereader.readAsDataURL(files);//调用FileReader对象的方法
+                    filereader.onloadend = function (e) {
+                        path = e.target.result;
+
+                        if (index < 9) {
+                            var id = 'pic' + index;
+                            addpic.before('<div class="pic"><img id="' + id + '" style="height:80px;"/><div class="close iconfont" onclick="removePic(this);"></div></div>');
+                            index++;
+                            $('#' + id).attr("src", path);
+                        }
+                    }
+                }
+                selectfile.val('');
+            })
+
+        }
+
+        function removePic(dom) {
+            $dom = $(dom);
+            $dom.parent().remove();
+        }
+
+        function selectMsgType(dom) {
+            $dom = $(dom);
+            var msgmenu = $('.menutext');
+            msgmenu.removeClass('menutextselect');
+            $dom.addClass('menutextselect');
+        }
+    </script>
+}
 <!-- 左侧菜单 -->
 <div class="main-nav-left">
     <!-- 个人信息 -->
@@ -112,6 +188,7 @@
 </div>
 <!--中间部分-->
 <div class="main-middle">
+    <!--编辑框-->
     <div class="edit main-middle-w">
         <div class="title">
             <div class="left">
@@ -120,19 +197,19 @@
         </div>
         <div class="editbox">
             <div class="inputtext">
-                <textarea></textarea>
-            </div>            
+                <textarea id="textbox"></textarea>
+            </div>
         </div>
         <div class="editbottom">
             <div class="left">
                 <ul>
                     <li>
                         <div>
-                            <span class="iconfont"></span>
+                            <span class="trigger iconfont"></span>
                         </div>
                     </li>
                     <li>
-                        <div>
+                        <div onclick="display(this);">
                             <span class="iconfont"></span>
                         </div>
                     </li>
@@ -149,10 +226,77 @@
                 </ul>
             </div>
             <div class="right">
-                <button>发布</button>
+                <button id="publish">发布</button>
             </div>
         </div>
     </div>
+    <!--状态类型选择菜单-->
+    <div class="msgmenu main-middle-w">
+        <div class="left">
+            <ul>
+                <li>
+                    <div class="menutextselect menutext" onclick="selectMsgType(this)">全部</div>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <div class="menutext" onclick="selectMsgType(this)">原创</div>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <div class="menutext" onclick="selectMsgType(this)">图片</div>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <div class="menutext" onclick="selectMsgType(this)">文章</div>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <div class="menutext" onclick="selectMsgType(this)">问答</div>
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+
+        </div>
+    </div>
+
+    <div class="msg main-middle-w">
+        <ul>
+            <li>
+                <div>
+
+                </div>
+            </li>
+        </ul>
+    </div>
+    <p id="AAA"></p>
+
+</div>
+
+<div id="selectpicbox" class="selectpicbox">
+    <div class="title">
+        <h4>本地上传</h4>
+    </div>
+    <div class="piccount">
+        <span style="padding:8px 0 2px 0;display:inline-block">共0张照片，还可以上传9张</span>
+        <button class="tagbtn">添加标签</button>
+    </div>
+    <div class="picbox">
+        @*<div class="pic">
+            <img style="height:80px;" />
+            <div class="close iconfont" onclick="removePic(this);"></div>
+        </div>*@
+
+        <div id="addpic" class="addpic">
+            <div class="iconfont"></div>
+        </div>
+
+    </div>
+    <input id="selectfile" type="file" accept="image/*" style="display:none" />
 </div>
 
 

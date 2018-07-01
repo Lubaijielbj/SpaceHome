@@ -139,10 +139,11 @@
 
 .main-middle-w{
     width:650px;
+    margin:0 auto;
 }
 
+/*****编辑框*****/
 .edit{
-    margin:0 auto;
     background-color:#fff;
 }
 
@@ -179,6 +180,12 @@
         border: 1px solid #d4d4d4;
         box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.15) inset;
     }
+
+        .editbox > .inputtext > textarea {
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: inherit;
+        }
 
     .editbox textarea {
         height: 100%;
@@ -242,3 +249,133 @@
                 background-color: #6ea929;
             }
 
+/*****动态菜单条*****/
+
+.msgmenu{
+    height:40px;
+    background-color:#fff;
+    margin:10px auto;    
+}
+
+.msgmenu *{
+    display:inline-block;
+}
+
+.msgmenu .menutext{
+    display:inline-block;
+    text-align:center;
+    line-height:40px;
+    padding:0 10px;
+    font-size:85%;
+
+    position:relative;
+    cursor:pointer;
+}
+
+.msgmenu .menutext:hover{
+    color:rgb(228, 94, 94);
+}
+
+.menutextselect {
+    font-weight: 600;
+}
+.menutextselect:before {
+    position: absolute;
+    top: 25px;
+    left: 15px;
+    display: block;
+    content: '';
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-bottom-color: #bbb;
+}
+
+
+/********状态**********/
+.msg{
+    height:500px;
+    background-color:#fff;
+}
+
+
+
+
+/*图片选择框*/
+.selectpicbox {
+    /*height:300px;*/
+    display:none;
+    width: 260px;
+    max-height:320px;
+    overflow: hidden;
+    padding: 16px 16px 10px 16px;
+    background-color: #fff;
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 4px;
+    position: absolute;
+}
+
+    .selectpicbox .piccount{
+        font-size:70%;
+        margin-top:15px;
+    }
+
+    .selectpicbox .tagbtn {
+        padding:5px;
+        float: right;
+        background: #ff8140;
+        border: 1px solid #f77c3d;
+        color: #fff;
+        box-shadow: 0px 1px 2px rgba(0,0,0,0.25);
+        outline:none;
+    }
+
+    .selectpicbox .picbox{
+        margin:10px 0;
+    }
+
+.pic {
+    float: left;
+    width: 80px;
+    height: 80px;
+    position: relative;
+    margin: 0 6px 6px 0;
+    /*background: url("../images/background.jpg") no-repeat 0 bottom #f3f3f3;*/
+    /*background-image: url('../images/background.jpg');*/
+    /*background-size: cover;*/
+    text-align: center;
+    overflow: hidden;
+}
+
+.pic:hover .close{
+    display:block;
+}
+
+.pic>.close{
+    display:none;
+    height:15px;
+    width:15px;
+    background-color:#e64646;
+    border-radius:50%;
+    position:absolute;
+    top:5px;
+    right:5px;
+    color:#fff;
+    font-size:5px;
+    cursor:pointer;
+}
+
+.addpic {
+    float: left;
+    width: 76px;
+    height: 76px;
+    position: relative;
+    margin: 0 6px 6px 0;
+    border:2px dashed #808080;
+    text-align: center;
+    overflow: hidden;
+    line-height:76px;
+    color:#808080;
+    font-size:25px;
+    cursor:pointer;
+}
